@@ -1,4 +1,4 @@
 linked-list-js
 ==============
 
-A JavaScript linked list
+A JavaScript doubly-linked list
