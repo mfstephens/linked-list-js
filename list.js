@@ -18,6 +18,7 @@ function list() {
 	Public Data Members
 	******************/
 
+	// returns true if list is empty, false otherwise
 	this.empty = function() {
 		if(tail === null || head === null) {
 			return true;
@@ -25,6 +26,8 @@ function list() {
 		return false;
 	};
 
+	// returns first item in list
+	// throws error if list is empty
 	this.front = function() {
 		if(that.empty()) {
 			throw("Error: empty list");
@@ -32,6 +35,8 @@ function list() {
 		return head.data;
 	};
 
+	// returns last item in list
+	// throws error if list is empty
 	this.back = function() {
 		if(that.empty()) {
 			throw("Error: empty list");
@@ -39,11 +44,12 @@ function list() {
 		return tail.data;
 	};
 
+	// returns size of list
 	this.size = function() {
 		return size;
 	};
 
-	// method to append item to back of list
+	// appends item to back of list
 	this.push_back = function(_data) {
 		tail = new node(_data, null, tail);
 		if(tail.previous !== null) {
@@ -55,7 +61,7 @@ function list() {
 		size++;
 	};
 
-	// method to append item to front of list
+	// appends item to front of list
 	this.push_front = function(_data) {
 		head = new node(_data, head, null);
 		if(head.next !== null) {
@@ -67,7 +73,8 @@ function list() {
 		size++;
 	};
 
-	// method to remove last item in list
+	// removes last item in list
+	// throws error if list is empty
 	this.pop_back = function() {
 		if(that.empty()) {
 			throw("Error: empty list");
@@ -83,7 +90,8 @@ function list() {
 		size--;
 	};
 
-	// method to remove first item in list
+	// removes first item in list
+	// throws error if list is empty
 	this.pop_front = function() {
 		if(that.empty()) {
 			throw("Error: empty list");
