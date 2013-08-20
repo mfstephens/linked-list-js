@@ -107,37 +107,3 @@ function list() {
 		size--;
 	};
 };
-
-var testList = new list();
-var testArray = [];
-
-JSLitmus.test("List push_front", function(count) {
-	while (count--) {
-		testList.push_front(1);
-	}
-});
-
-JSLitmus.test("Array unshift", function(count) {
-	while (count--) {
-		testArray.unshift(1);
-	}
-});
-
-
-// console.time("timer");
-
-// for(var i = 0; i < 10000000; ++i) {
-// 	mylist.push_front(i);
-// }
-
-// console.timeEnd("timer");
-
-
-// for(var i = 0; i < 1000; ++i) {
-// 	mylist.pop_front(i);
-// }
-
-// for(var i = 0; i < 1000; ++i) {
-// 	thearray.push(i);
-// }
-
